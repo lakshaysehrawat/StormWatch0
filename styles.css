@@ -1,0 +1,171 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color and text color for the entire page */
+  body {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the header section */
+  /* Set the background image for the header */
+  h1 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  /* Style the container */
+  .container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the weather input section */
+  .weather-input {
+    text-align: center;
+  }
+  
+  .city-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-btn, .location-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+  }
+  
+  .separator {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  /* Style the current weather section */
+  .current-weather {
+    text-align: center;
+  }
+  
+  /* Style the weather cards section */
+  .days-forecast {
+    text-align: center;
+  }
+  
+  .weather-cards {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  /* Add more specific styling as needed for different elements and states */
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .weather-cards {
+      flex-direction: column;
+    }
+    .card {
+      margin: 10px 0;
+    }
+  }
+  
+
+  /* Updated CSS with improved image visibility and design enhancements */
+
+/* Adjust image size, centering, and margin */
+/* Style the weather icons to make them more visible */
+.icon img {
+  width: 60px; /* Adjust the size as needed */
+  margin: 0 auto;
+  color: #3498db;
+  filter: brightness(150%); /* Increase image brightness for better visibility */
+}
+
+
+/* Enhance the overall design */
+body {
+  background: linear-gradient(to bottom, #3498db, #fff); /* Gradient background */
+  color: #3498db;
+  font-family: "Helvetica Neue", sans-serif; /* Choose an elegant font */
+}
+
+/* Improved button style */
+.search-btn, .location-btn {
+  background-color: #ff5733; /* Use a contrasting color for buttons */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s; /* Add a smooth transition on hover */
+}
+
+.search-btn, .location-btn:hover {
+  background-color: #ff1f1f; /* Darker color on hover */
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+  .weather-cards {
+      flex-direction: column;
+  }
+  .card {
+      margin: 10px 0;
+  }
+}
+/* footer */
+/* Footer styling */
+.footer {
+  background-color: #333; /* Background color for the footer */
+  color: #fff; /* Text color for the footer */
+  text-align: center;
+  padding: 10px 0; /* Add padding for spacing */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Adjust the font size */
+}
+
+/* Add a hover effect to the footer */
+.footer:hover {
+  background-color: #222; /* Darker background color on hover */
+}
+
