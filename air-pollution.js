@@ -1,26 +1,112 @@
-const locationInput = document.getElementById('locationInput');
-const checkButton = document.getElementById('checkButton');
-const result = document.getElementById('result');
+const errorLabel = document.querySelector("label[for='error-msg']")
+const latInp = document.querySelector("#latitude")
+const lonInp = document.querySelector("#longitude")
+const airQuality = document.querySelector(".air-quality")
+const airQualityStat = document.querySelector(".air-quality-status")
+const srchBtn = document.querySelector(".search-btn")
+const componentsEle = document.querySelectorAll(".component-val")
 
-const API_KEY = '220af204ce6dc93516c854f71509699d';
+const appId = "137a0b24f1bb37fe8dc4cde0577d01d2" // Get your own API Key from https://home.openweathermap.org/api_keys
+const link = "https://api.openweathermap.org/data/2.5/air_pollution"	// API end point
 
-checkButton.addEventListener('click', () => {
-    const location = locationInput.value;
+const getUserLocation = () => {
+	// Get user Location
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(onPositionGathered, onPositionGatherError)
+	} else {
+		onPositionGatherError({ message: "Can't Access your location. Please enter your co-ordinates" })
+	}
+}
 
-    if (location === '') {
-        alert('Please enter a location.');
-        return;
-    }
+const onPositionGathered = (pos) => {
+	let lat = pos.coords.latitude.toFixed(4), lon = pos.coords.longitude.toFixed(4)
 
-    const API_URL = `https://api.openweathermap.org/data/2.5/air_pollution?q=${location}&appid=${API_KEY}`;
+	// Set values of Input for user to know
+	latInp.value = lat
+	lonInp.value = lon
 
-    fetch(API_URL)
-        .then((response) => response.json())
-        .then((data) => {
-            const aqi = data.list[0].main.aqi;
-            result.textContent = `Air Quality Index (AQI): ${aqi}`;
-        })
-        .catch(() => {
-            result.textContent = 'Error fetching data. Please try again later.';
-        });
-});
+	// Get Air data from weather API
+	getAirQuality(lat, lon)
+}
+
+const getAirQuality = async (lat, lon) => {
+	// Get data from api
+	const rawData = await fetch(`${link}?lat=${lat}&lon=${lon}&appid=${appId}`).catch(err => {
+		onPositionGatherError({ message: "Something went wrong. Check your internet conection." })
+		console.log(err)
+	})
+	const airData = await rawData.json()
+	setValuesOfAir(airData)
+	setComponentsOfAir(airData)
+}
+
+const setValuesOfAir = airData => {
+	const aqi = airData.list[0].main.aqi
+	let airStat = "", color = ""
+
+	// Set Air Quality Index
+	airQuality.innerText = aqi
+
+	// Set status of air quality
+
+	switch (aqi) {
+		case 1:
+			airStat = "Good"
+			color = "rgb(19, 201, 28)"
+			break
+			case 2:
+				airStat = "Fair"
+				color = "rgb(15, 134, 25)"
+				break
+			case 3:
+				airStat = "Moderate"
+				color = "rgb(201, 204, 13)"
+				break
+			case 4:
+				airStat = "Poor"
+				color = "rgb(204, 83, 13)"
+				break
+		case 5:
+			airStat = "Very Poor"
+			color = "rgb(204, 13, 13)"
+			break
+		default:
+			airStat = "Unknown"
+	}
+
+	airQualityStat.innerText = airStat
+	airQualityStat.style.color = color
+}
+
+const setComponentsOfAir = airData => {
+	let components = {...airData.list[0].components}
+	componentsEle.forEach(ele => {
+		const attr = ele.getAttribute('data-comp')
+		ele.innerText = components[attr] += " μg/m³"
+	})
+}
+
+const onPositionGatherError = e => {
+	errorLabel.innerText = e.message
+}
+
+srchBtn.addEventListener("click", () => {
+	getAirQuality(parseFloat(latInp.value).toFixed(4), parseFloat(lonInp.value).toFixed(4))
+})
+
+// fetch(API_URL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         if (data.list && data.list.length > 0) {
+//             const aqi = data.list[0].main.aqi;
+//             result.textContent = `Air Quality Index (AQI): ${aqi}`;
+//         } else {
+//             result.textContent = 'No data found for this location.';
+//         }
+//     })
+//     .catch(() => {
+//         result.textContent = 'Error fetching data. Please try again later.';
+//     });
+
+
+getUserLocation()
