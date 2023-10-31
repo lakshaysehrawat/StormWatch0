@@ -10,6 +10,38 @@ body, h1, h2, h3, p {
     color: #333;
     font-family: Arial, sans-serif;
   }
+
+  /* Style the top section */
+.top {
+  background-color: #3498db; /* Background color for the top section */
+  color: #fff; /* Text color */
+  padding: 10px; /* Add padding for spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the top-head (h1) element */
+.top-head h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Style the top-link (anchor) element */
+.top-link a {
+  text-decoration: none;
+  color: #fff; /* Link text color */
+  background-color: #ff7f00; /* Link background color */
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth hover effect transition */
+}
+
+/* Add a hover effect for the link */
+.top-link a:hover {
+  background-color: #ffae42; /* Change background color on hover */
+}
+
   
   /* Style the header section */
   /* Set the background image for the header */
