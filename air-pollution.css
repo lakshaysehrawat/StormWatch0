@@ -6,10 +6,10 @@
 
 .root {
 	padding: 2vw;
-	background-image: linear-gradient(to right bottom, #213764, #295089, #2c6caf, #2688d7, #00a7ff);
+	background-image: linear-gradient(to bottom, #3498db, #67aede);
 	width: 100%;
 	height: 100%;
-	color: white;
+	color: #fff;
 	font-family: poppins;
 	min-height: 100vh;
 }
@@ -30,6 +30,7 @@
 	font-size: 24px;
 	margin: 0;
   }
+
   
   /* Style the top-link (anchor) element */
   .top-link a {
@@ -44,6 +45,12 @@
   /* Add a hover effect for the link */
   .top-link a:hover {
 	background-color: #ffae42; /* Change background color on hover */
+  }
+
+  body {
+	background: linear-gradient(to bottom, #3498db, #fff); /* Gradient background */
+	color: #3498db;
+	font-family: "Helvetica Neue", sans-serif; /* Choose an elegant font */
   }
 
 .location-container {
