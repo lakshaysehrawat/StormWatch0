@@ -14,18 +14,37 @@
 	min-height: 100vh;
 }
 
-.heading {
-	text-align: center;
-	font-family: 'Fira Code', monospace;
-	font-size: 3rem;
-	margin-bottom: 60px;
-}
 
-.sub-heading {
-	margin: 20px 0;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 2rem;
-}
+
+.top {
+	background-color: #3498db; /* Background color for the top section */
+	color: #fff; /* Text color */
+	padding: 10px; /* Add padding for spacing */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  /* Style the top-head (h1) element */
+  .top-heading h1 {
+	font-size: 24px;
+	margin: 0;
+  }
+  
+  /* Style the top-link (anchor) element */
+  .top-link a {
+	text-decoration: none;
+	color: #fff; /* Link text color */
+	background-color: #ff7f00; /* Link background color */
+	padding: 10px 20px;
+	border-radius: 5px; /* Rounded corners */
+	transition: background-color 0.3s; /* Smooth hover effect transition */
+  }
+  
+  /* Add a hover effect for the link */
+  .top-link a:hover {
+	background-color: #ffae42; /* Change background color on hover */
+  }
 
 .location-container {
 	margin: 40px 0;
