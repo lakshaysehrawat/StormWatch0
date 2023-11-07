@@ -55,7 +55,10 @@
 	color: #f8fcff;
 	font-family: "Helvetica Neue", sans-serif; /* Choose an elegant font */
   }
-
+.aqi {
+	position: absolute;
+	right: 10%;
+}
 .location-container {
 	margin: 40px 0;
 }
@@ -109,7 +112,7 @@ footer {
 	text-align: center;
 }
 
-.map {
+/* .map {
 	position: absolute;
     right: 25%;
-}
+} */
