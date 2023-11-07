@@ -162,7 +162,7 @@ body {
 }
 /* aim moto  */
 .container-mid {
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -220,6 +220,11 @@ body {
   .card {
       margin: 10px 0;
   }
+}
+/* map */
+.map {
+	position: absolute;
+    left: 0;
 }
 /* footer */
 /* Footer styling */
