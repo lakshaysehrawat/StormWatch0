@@ -6,14 +6,17 @@ body, h1, h2, h3, p {
   
   /* Set a background color and text color for the entire page */
   body {
-    background-color: #f2f2f2;
+  
     color: #333;
     font-family: Arial, sans-serif;
   }
-
+.upper-body {
+  background: url("images/background-storm.avif");
+}
   /* Style the top section */
-.top {
-  background-color: #3498db; /* Background color for the top section */
+.top { /* Background color for the top section */
+ 
+  /* background-color: #3498db; */
   color: #fff; /* Text color */
   padding: 10px; /* Add padding for spacing */
   display: flex;
@@ -26,27 +29,32 @@ body, h1, h2, h3, p {
   font-size: 24px;
   margin: 0;
 }
+/*map*/
 
 /* Style the top-link (anchor) element */
 .top-link a {
   text-decoration: none;
   color: #fff; /* Link text color */
-  background-color: #ff7f00; /* Link background color */
+  /* background-color: #ff7f00; */
   padding: 10px 20px;
+  gap: 2px;
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth hover effect transition */
 }
 
 /* Add a hover effect for the link */
 .top-link a:hover {
-  background-color: #ffae42; /* Change background color on hover */
+  color: #E25E3E;
 }
 
+
+#map { height: 250px;
+}
   
   /* Style the header section */
   /* Set the background image for the header */
   h1 {
-    background-color: #3498db;
+    /* background-color: #3498db; */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -58,7 +66,7 @@ body, h1, h2, h3, p {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -78,7 +86,7 @@ body, h1, h2, h3, p {
   }
   
   .search-btn, .location-btn {
-    background-color: #3498db;
+    /* background-color: #3498db; */
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -111,10 +119,10 @@ body, h1, h2, h3, p {
   }
   
   .card {
-    background-color: #fff;
+    /* background-color: #eaea2f; */
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(222, 188, 53, 0.304);
     margin: 10px;
   }
   
@@ -148,15 +156,46 @@ body, h1, h2, h3, p {
 
 /* Enhance the overall design */
 body {
-  background: linear-gradient(to bottom, #3498db, #fff); /* Gradient background */
-  color: #3498db;
+  /* background: linear-gradient(to bottom, #3498db, #272ab9); */
+  color: #fff;
   font-family: "Helvetica Neue", sans-serif; /* Choose an elegant font */
+}
+/* aim moto  */
+.container-mid {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.mid-header{
+  color: #333;
+}
+.mid-para {
+  color: #666;
+}
+.about-section {
+  text-align: center;
+  padding: 20px;
+}
+.aim-motto-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.aim {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.motto {
+  color: #8E8FFA;
 }
 
 /* Improved button style */
 .search-btn, .location-btn {
-  background-color: #ff5733; /* Use a contrasting color for buttons */
-  color: #fff;
+  background-color: DE8F5F; 
+  color: black;
   padding: 12px 24px;
   border: none;
   border-radius: 5px;
@@ -166,9 +205,9 @@ body {
   transition: background-color 0.3s; /* Add a smooth transition on hover */
 }
 
-.search-btn, .location-btn:hover {
-  background-color: #ff1f1f; /* Darker color on hover */
-}
+/* .search-btn, .location-btn:hover {
+  background-color: #ff7f00;
+} */
 
 /* Add responsive design for smaller screens */
 @media (max-width: 768px) {
@@ -185,8 +224,9 @@ body {
 /* footer */
 /* Footer styling */
 .footer {
-  background-color: #333; /* Background color for the footer */
-  color: #fff; /* Text color for the footer */
+  /* background-color: #333; */
+  background-color: #222;
+  color: white; /* Text color for the footer */
   text-align: center;
   padding: 10px 0; /* Add padding for spacing */
 }
@@ -198,6 +238,7 @@ body {
 
 /* Add a hover effect to the footer */
 .footer:hover {
-  background-color: #222; /* Darker background color on hover */
+  background-color: #333;
+  
 }
 

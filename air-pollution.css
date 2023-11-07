@@ -6,7 +6,7 @@
 
 .root {
 	padding: 2vw;
-	background-image: linear-gradient(to bottom, #3498db, #67aede);
+	/* background-image: linear-gradient(to bottom, #3498db, #67aede); */
 	width: 100%;
 	height: 100%;
 	color: #fff;
@@ -17,7 +17,7 @@
 
 
 .top {
-	background-color: #3498db; /* Background color for the top section */
+	/* background-color: #3498db;  */
 	color: #fff; /* Text color */
 	padding: 10px; /* Add padding for spacing */
 	display: flex;
@@ -36,7 +36,7 @@
   .top-link a {
 	text-decoration: none;
 	color: #fff; /* Link text color */
-	background-color: #ff7f00; /* Link background color */
+	/* background-color: #ff7f00; */
 	padding: 10px 20px;
 	border-radius: 5px; /* Rounded corners */
 	transition: background-color 0.3s; /* Smooth hover effect transition */
@@ -44,12 +44,15 @@
   
   /* Add a hover effect for the link */
   .top-link a:hover {
-	background-color: #ffae42; /* Change background color on hover */
+	color: #E25E3E;
   }
 
   body {
-	background: linear-gradient(to bottom, #3498db, #fff); /* Gradient background */
-	color: #3498db;
+	background: url("images/background-storm.avif");
+	color: #333;
+	font-family: Arial, sans-serif;
+	/* background: linear-gradient(to bottom, #cf992c, #fff); /* Gradient background */
+	color: #f8fcff;
 	font-family: "Helvetica Neue", sans-serif; /* Choose an elegant font */
   }
 
@@ -72,13 +75,13 @@
 
 .search-btn {
 	padding: 10px 14px;
-	background-color: #269fe6;
+	/* background-color: #269fe6; */
 	border: none;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	font-size: 1rem;
 	border-radius: 4px;
-	color: #fff;
+	color: black;
 	margin: 10px;
 	cursor: pointer;
 }
@@ -104,4 +107,9 @@
 footer {
 	margin-top: 40px;
 	text-align: center;
+}
+
+.map {
+	position: absolute;
+    right: 25%;
 }

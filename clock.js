@@ -1,17 +1,17 @@
 function updateClock() {
     const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
 
-    const timeString = `${hours}:${minutes}:${seconds}`;
+    const hourDeg = (360 / 12) * (hours % 12) + (360 / 12) * (minutes / 60);
+    const minuteDeg = (360 / 60) * minutes + (360 / 60) * (seconds / 60);
+    const secondDeg = (360 / 60) * seconds;
 
-    const clockElement = document.getElementById("clock");
-    clockElement.textContent = timeString;
+    document.querySelector('.hour-hand').style.transform = `rotate(${hourDeg}deg)`;
+    document.querySelector('.minute-hand').style.transform = `rotate(${minuteDeg}deg)`;
+    document.querySelector('.second-hand').style.transform = `rotate(${secondDeg}deg)`;
 }
 
-// Update the clock every second
-setInterval(updateClock, 1000);
-
-// Initial call to set the clock
-updateClock();
+setInterval(updateClock, 1000); // Update the clock every second
+updateClock(); // Initial update
