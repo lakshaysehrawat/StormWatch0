@@ -10,9 +10,13 @@ body, h1, h2, h3, p {
     color: #333;
     font-family: Arial, sans-serif;
   }
-.upper-body {
-  background: url("images/background-storm.avif");
-}
+  .upper-body {
+    background: url("images/background-storm.avif");
+    /* background-size: 100%; */
+	background-position: center top;
+	background-repeat: no-repeat;
+  }
+  
   /* Style the top section */
 .top { /* Background color for the top section */
  
@@ -63,10 +67,10 @@ body, h1, h2, h3, p {
   
   /* Style the container */
   .container {
-    max-width: 960px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 20px;
-    /* background-color: #fff; */
+    background-color: rgb(255, 255, 255)15;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -120,6 +124,7 @@ body, h1, h2, h3, p {
   
   .card {
     /* background-color: #eaea2f; */
+    /* color: #222222; */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(222, 188, 53, 0.304);
@@ -163,15 +168,19 @@ body {
 /* aim moto  */
 .container-mid {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #FFF2D8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .mid-header{
+  font-weight: bolder;
+  font-size: xx-large;
+  margin-bottom: 2%;
   color: #333;
 }
 .mid-para {
+  margin: 5px;
   color: #666;
 }
 .about-section {

@@ -48,7 +48,11 @@
   }
 
   body {
-	background: url("images/background-storm.avif");
+	background: url("images/wheather-back.jpg");
+	background-size: 100% auto; /* 100% width and auto height */
+	background-position: center top; /* Center horizontally and align to the top */
+	background-repeat: no-repeat; /* Prevent image repetition */
+	/* background: url("images/background-storm.avif"); */
 	color: #333;
 	font-family: Arial, sans-serif;
 	/* background: linear-gradient(to bottom, #cf992c, #fff); /* Gradient background */
@@ -57,7 +61,35 @@
   }
 .aqi {
 	position: absolute;
+	top: 60%;
 	right: 10%;
+}
+/* table */
+table {
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	border-collapse: collapse;
+	width: 20%;
+	margin: 20px auto;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+
+th {
+	background-color: #222;
+}
+
+tr:nth-child(even) {
+	background-color: #269fe6;
+}
+
+tr:nth-child(odd) {
+	background-color: #396d8b;
 }
 .location-container {
 	margin: 40px 0;
@@ -107,11 +139,24 @@
 	margin-left: 20px;
 }
 
-footer {
-	margin-top: 40px;
+.footer {
+	/* background-color: #333; */
+	background-color: #222;
+	color: white; /* Text color for the footer */
 	text-align: center;
-}
-
+	padding: 10px 0; /* Add padding for spacing */
+  }
+  
+  .footer p {
+	margin: 8px; /* Remove default margin */
+	font-size: 14px; /* Adjust the font size */
+  }
+  
+  /* Add a hover effect to the footer */
+  .footer:hover {
+	background-color: #333;
+	
+  }
 /* .map {
 	position: absolute;
     right: 25%;

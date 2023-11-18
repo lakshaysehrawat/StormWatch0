@@ -37,11 +37,38 @@
 	    <div class="aqi">
 			<img src="images/AQII.png" width="600px" alt="AQI">
 		</div>
+		<table class="table-aqi" border="1">
+			<tr>
+				<th>AQI RATING</th>
+				<th>AQI RANGE</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>0-100</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>101-200</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>201-300</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>301-400</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>401-500</td>
+			</tr>
+		</table>
 		<div class="air-info">
 			<h2 class="sub-heading">Air Quality Index :</h2>
 			<span class="air-quality">...</span>
 			<span class="arr">&nbsp;&rarr;&nbsp;</span>
 			<span class="air-quality-status">...</span>
+			<p class="real-aqi">Real AQI: <span class="aqi-value">Loading...</span></p>
 			<div class="component-container">
 				<h2 class="sub-heading">
 					Concentration of pollutants in air :
@@ -82,10 +109,11 @@
 				<!--  micrograms per cubic meter of air (μg/m3)  -->
 			</div>
 		</div>
-		<footer>
-			Plant more <img src="images/tree.svg" width="35" height="35" />
+		</div>
+		<footer class="footer">
+			    Plant more <img src="images/tree.svg" width="35" height="35" />
+				<p>&copy; 2023 WeatherApp - Storm Watch</p>
 		</footer>
-	</div>
 	<script src="./air-pollution.js" defer></script>
 </body>
 </html>
